@@ -7,7 +7,9 @@ class Stack {
     int top;
 
     public:
-    Stack() {top == -1;}
+    Stack() {
+        top = -1;
+    }
 
     //isEmpty
     bool isEmpty(){
@@ -26,7 +28,7 @@ class Stack {
         } else {
             arr[top] = arr[top +1];
             arr[top] = x;
-            cout<< x << "Pushed into stack\n";
+            cout<< x << " Pushed into stack\n";
         }
     }
 

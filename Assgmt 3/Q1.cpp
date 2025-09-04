@@ -26,8 +26,7 @@ class Stack {
         if(isFull()) {
             cout<<"Stack Overflow!" << x << endl;
         } else {
-            arr[top] = arr[top +1];
-            arr[top] = x;
+            arr[++top] = x;
             cout<< x << " Pushed into stack\n";
         }
     }
@@ -55,10 +54,11 @@ class Stack {
         if (isEmpty()) {
             cout<<"Stack is Empty\n";
         } else {
-            cout<< "Stack elements are:";
-            for(int i = top; i>-1; i--){
-                cout << arr[i]<< endl;
+            cout<< "Stack elements are: ";
+            for(int i = top; i>=0; i--){
+                cout << arr[i]<<" ";
             }
+            cout<<endl;
         }
     }
 };

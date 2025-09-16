@@ -4,12 +4,12 @@ using namespace std;
 class stack{
     public:
     int top;
-    char arr[100];
+    int arr[100];
     public:
     stack(){
         top=-1;
     }
-void push(char val){
+void push(int val){
     if(top>=99){
         cout<<"stack is full";
         return;
@@ -18,7 +18,7 @@ void push(char val){
     arr[top]=val;
 
 }
-char pop(){
+int pop(){
 if(isempty()){
     cout<<"empty";
     return 0;
@@ -26,7 +26,7 @@ if(isempty()){
 
 return arr[top--];
 }
-    char peek() {
+    int peek() {
         if (isempty()) return '\0';
         return arr[top];
     }

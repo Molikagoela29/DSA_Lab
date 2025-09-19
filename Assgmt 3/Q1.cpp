@@ -26,7 +26,9 @@ class Stack {
         if(isFull()) {
             cout<<"Stack Overflow!" << x << endl;
         } else {
-            arr[++top] = x;
+            top = top + 1;
+            arr[top] = x;
+            //arr[++top] = x;
             cout<< x << " Pushed into stack\n";
         }
     }
@@ -36,7 +38,11 @@ class Stack {
         if(isEmpty()) {
             cout << "Stack underflow! Cannot pop\n";
         } else {
-            cout<< arr[top--]<< "Popped from stack\n";
+            int x = arr[top];
+            top = top - 1;
+            cout<< x<< " Popped from stack\n";
+
+            //cout<< arr[top--]<< " Popped from stack\n";
         }
     }
 

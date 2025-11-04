@@ -14,7 +14,7 @@ class Queue {
     }
 
     bool isEmpty(){
-        return(front == -1 && rear == -1);
+        return((front == -1 && rear == -1)|| front>rear);
     }
 
     bool isFull(){
